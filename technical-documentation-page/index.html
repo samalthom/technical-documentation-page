@@ -10,36 +10,62 @@
     <main id="main-doc">
       <nav id="navbar">
         <header>HTML Documentation</header>
-        <a class="nav-link">Introduction</a><a class="nav-link">Anatomy of an HTML Element</a><a class="nav-link">Images</a><a class="nav-link">Marking up Text</a><a class="nav-link">Links</a><a class="nav-link">Conclusion</a><a class="nav-link">Reference</a>
-      </nav>
-      <section>
-        <header id="introduction">Introduction</header>
+        <div><a class="nav-link" href="#introduction">Introduction</a><a class="nav-link" href="#anatomy_of_html">Anatomy of HTML</a><a class="nav-link" href="#images">Images</a><a class="nav-link" href="#marking_up_text">Marking up Text</a><a class="nav-link" href="#links">Links</a><a class="nav-link" href="#reference">Reference</a>
+      </nav></div>
+      <section class="main-section" id="introduction">
+        <header>Introduction</header>
         <p>HTML stands for HyperText Markup Language and is the code used to structure a web page and its content. It consists of a series elements used to wrap different parts of the content to make it appear or act a certain way. For example, take the following line of content:</p>
         <code>Hello, World!</code>
         <p>If we want this line to stand by itself, you can specify it is a paragraph by enclosing it in paragraph tags:</p>
         <code>&lt;p&gt; Hello, World! &lt;/p&gt;</code> 
       </section>
-      <section>
-        <header id="anatomy">Anatomy of an HTML Element</header>
+      <section class="main-section" id="anatomy_of_html">
+        <header>Anatomy of HTML</header>
         <p>The parts of the above element are as follows:</p>
-        <ol><li>
+        <ol><li><strong>Opening tag:</strong> consisting of the name of the element, wrapped in opening and closing angle brackets.</li>
+        <li><strong>Closing tag:</strong> the same as the opening tag, except it includes a forward slash before the element name.</li>
+        <li><strong>Content:</strong> self explanatory.</li>
+        <li><strong>Element:</strong> the opening tag, closing tag, and the content together comprise the element.</li>
+        </ol>
+        <p>Elements can also have <strong>attributes</strong> within the opening tag, which contain extra information about the element that you don't want to appear in the actual content. You can <strong>nest</strong> elements inside other elements too</p>
+        <p>Here is how HTML individual elements are combined to form an entire HTML page:</p>
+        <code>
+        <pre>&lt;!doctype html&gt; <span class="comment">&lt;!--Required preamble--&gt;</span>
+&lt;html lang="en-US"&gt; <span class="comment">&lt;!--Wraps all the content on the page--&gt;</span>
+  &lt;head&gt; <span class="comment">&lt;!--Container for all non-content information--&gt;</span>
+    &lt;meta charset="utf-8" /&gt; 
+    &lt;meta name="viewport" content="width=device-width" /&gt;
+    &lt;title&gt;My test page&lt;/title&gt; <span class="comment">&lt;!--The text in the browser tab--&gt;</span>
+  &lt;/head&gt;
+  &lt;body&gt; <span class="comment">&lt;!--Contains all content--&gt;</span>
+    &lt;img src="images/firefox-icon.png" alt="My test image" /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre></code>
       </section>
-      <section>
-        <header id="images">Images</header>
+      <section class="main-section" id="images">
+        <header>Images</header>
+        <p>The image element has no inner content, so is an example of a void element, and embeds an image in the HTML page via the source attribute containing the path to the image file.</p>
+        <p>There is also an alternative attribute, which allows you to specify descriptive text for users with visual impairs, or if the image does not display correctly.</p>
       </section>
-      <section>
-        <header id="marking-up-text">Marking up Text</header>
-      </section>
-      <section>
-        <header id="links">Links</header>
-      </section>
-      <section>
-        <header id="conclusion">Conclusion</header>
-      </section>
-      <section>
-        <header id="reference">Reference</header>
+      <section class="main-section" id="marking_up_text">
+        <header>Marking up Text</header>
+        <p>Here are some essential HTML elements for marking up text:</p>
         <ul>
-          <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">MDN</a></li></ul>
+          <li><strong>Headings:</strong> specifies that certain parts of your content are headings, or subheadings.</li>
+          <li><strong>Paragraphs:</strong> contains paragraphs of texts.</li>
+          <li><strong>Lists:</strong> consists of at least two elements, the type of list, and an element for each item instide the list.</li>
+      </section>
+      <section class="main-section" id="links">
+        <header>Links</header>
+  
+        <p>To add a link, use an anchor tag (<code class="inline">&lt;a&gt;</code>):</p>
+        <ul><li>Wrap some text in an achor element.</li><li>Give the anchor element an <code class="inline">href</code> attribute.</li><li>Fill in the value of this attribute with the web address you want the link to point to.</li></ul>
+        <p>Ensure you include the protocol, <code class="inline">https://</code>, to avoid unexpected results.</p>
+      </section>
+      <section class="main-section" id="reference">
+        <header>Reference</header>
+        <ul>
+          <li>All the documentation in this page is taken from <a class="external" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">MDN.</a></li></ul>
       </section>
     </main>
   </body>

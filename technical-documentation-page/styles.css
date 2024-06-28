@@ -1,0 +1,49 @@
+html{
+    font-family: arial;
+  }
+  
+  header{
+    font-size: 30px;
+    margin: 10px;
+    margin-top: 20px;
+  }
+  
+  .main-section{
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  nav{
+    display: block;
+    border: solid;
+    border-color: #d9d9d9;
+  }
+  
+  nav div{
+    display: flex;
+  }
+  
+  a:not(external){
+    padding: auto;
+  }
+  
+  p{
+    padding: 10px;
+  }
+  
+  li{
+    padding-bottom: 5px;
+  }
+  
+  code{
+    background-color: #e3e1e1;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  
+  code:not(.inline){
+    display: block;
+    margin: 10px;
+    padding: 15px;
+    padding-left: 20px;
+  }
